@@ -2,6 +2,7 @@ import { LayoutDashboard, Map, Users, CreditCard, Settings, LogOut, CalendarDays
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
+import { AdminMobileNav } from "./AdminMobileNav";
 import { AdminSidebar } from "./AdminSidebar";
 
 export default function AdminLayout({
@@ -18,7 +19,10 @@ export default function AdminLayout({
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Admin Header (Mobile Nav) */}
         <header className="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-4 sm:px-6 lg:px-8">
-          <div className="md:hidden font-black text-slate-900 tracking-widest">WRAP-UP <span className="text-blue-600 font-bold text-sm ml-1">ADMIN</span></div>
+          <div className="flex items-center gap-2">
+            <AdminMobileNav />
+            <div className="md:hidden font-black text-slate-900 tracking-widest">WRAP-UP <span className="text-blue-600 font-bold text-sm ml-1">ADMIN</span></div>
+          </div>
           <div className="hidden md:block"></div>
           
           <div className="flex items-center gap-4">
