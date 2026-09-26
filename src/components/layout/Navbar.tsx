@@ -94,6 +94,9 @@ export function Navbar() {
                   </div>
                   Dashboard
                 </Link>
+                  <Link href="/admin" className={cn("text-sm font-bold px-3 py-1.5 rounded-full transition-colors", isScrolled || !isHome ? "bg-blue-50 text-blue-600 hover:bg-blue-100" : "bg-white/20 text-white hover:bg-white/30")}>
+                    Admin Panel
+                  </Link>
                   <Link href="/settings" className={linkClasses}>Settings</Link>
                   <button onClick={handleLogout} className={linkClasses}>Logout</button>
                 </div>
@@ -143,6 +146,9 @@ export function Navbar() {
                   <>
                     <Button variant="outline" className="w-full justify-center h-14 rounded-full text-base" asChild onClick={() => setMobileMenuOpen(false)}>
                       <Link href="/dashboard">Dashboard</Link>
+                    </Button>
+                    <Button variant="outline" className="w-full justify-center h-14 rounded-full text-base border-blue-200 bg-blue-50 text-blue-700" asChild onClick={() => setMobileMenuOpen(false)}>
+                      <Link href="/admin">Admin Panel</Link>
                     </Button>
                     <Button variant="outline" className="w-full justify-center h-14 rounded-full text-base" asChild onClick={() => setMobileMenuOpen(false)}>
                       <Link href="/settings">Settings</Link>
